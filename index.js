@@ -15,3 +15,12 @@ function addtask(){
     }
     input.value ="";
 }
+
+list.addEventListener("click", function(e){
+ if(e.target.targetName === "LI"){
+    e.target.classList.toggle("checked");
+ }
+ else if(e.target.targetName === "SPAN"){
+    e.target.parentElement.remove();
+ }
+}, false);
